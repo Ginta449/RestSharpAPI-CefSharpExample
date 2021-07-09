@@ -265,7 +265,7 @@ namespace TopLocationByGintaDeirdreLouise
             listViewDisplayLocationDetails.HotTracking = true;
             for (int i = 0; i < listViewDisplayLocationDetails.SelectedItems.Count; i++)
             {
-                System.Diagnostics.Process.Start(listViewDisplayLocationDetails.SelectedItems[i].SubItems[3].Text);//getting the website from listview
+                System.Diagnostics.Process.Start(listViewDisplayLocationDetails.SelectedItems[i].SubItems[3].Text);
             }
            
         }
