@@ -44,7 +44,7 @@ namespace TopLocationByGintaDeirdreLouise
             lblSelectCity.Visible = false;
             comboBoxSelectCity.Visible = false;
             
-            var client = new RestClient("http://battuta.medunes.net/api/country/all/?key=a750f370acfa1a65250fa8a4fb57125a");
+            var client = new RestClient("apilink");
             client.Timeout = -1;
             var request = new RestRequest(Method.GET);
             request.AlwaysMultipartFormData = true;
@@ -75,8 +75,8 @@ namespace TopLocationByGintaDeirdreLouise
             clienturl += selectedCountry;
             var client = new RestClient(clienturl);
             var request = new RestRequest(Method.GET);
-            request.AddHeader("x-rapidapi-key", "3d4be43107msh53bb4b4a9d8b26ap142dd7jsn0192ad0635fb");
-            request.AddHeader("x-rapidapi-host", "andruxnet-world-cities-v1.p.rapidapi.com");
+            request.AddHeader("x-rapidapi-key", "yourapikey");
+            request.AddHeader("x-rapidapi-host", "apilink");
             IRestResponse response = client.Execute(request);
             JsonDeserializer deserializer = new JsonDeserializer();
             var temp = new List<City>();
@@ -118,8 +118,8 @@ namespace TopLocationByGintaDeirdreLouise
                 clienturl += "&language = en";
                 var client = new RestClient(clienturl);
                 var request = new RestRequest(Method.GET);
-                request.AddHeader("x-rapidapi-key", "3d4be43107msh53bb4b4a9d8b26ap142dd7jsn0192ad0635fb");
-                request.AddHeader("x-rapidapi-host", "trueway-places.p.rapidapi.com");
+                request.AddHeader("x-rapidapi-key", "yourapikey");
+                request.AddHeader("x-rapidapi-host", "apilink");
                 IRestResponse response = client.Execute(request);
                 JsonDeserializer deserializer = new JsonDeserializer();
                 
@@ -143,8 +143,8 @@ namespace TopLocationByGintaDeirdreLouise
                 clienturl5 += "&lat=0&lon=0&lang=null&units=%22metric%22%20or%20%22imperial%22";
                 var client5 = new RestClient(clienturl5);
                 var request5 = new RestRequest(Method.GET);
-                request5.AddHeader("x-rapidapi-key", "3d4be43107msh53bb4b4a9d8b26ap142dd7jsn0192ad0635fb");
-                request5.AddHeader("x-rapidapi-host", "community-open-weather-map.p.rapidapi.com");
+                request5.AddHeader("x-rapidapi-key", "yourapikey");
+                request5.AddHeader("x-rapidapi-host", "apilink");
                 IRestResponse response5 = client5.Execute(request5);
                 JsonDeserializer deserializer5 = new JsonDeserializer();
             
@@ -207,7 +207,7 @@ namespace TopLocationByGintaDeirdreLouise
             clienturl2 += selectedCountry;
             var client2 = new RestClient(clienturl2);
             var request2 = new RestRequest(Method.GET);
-            request2.AddHeader("x-rapidapi-key", "3d4be43107msh53bb4b4a9d8b26ap142dd7jsn0192ad0635fb");
+            request2.AddHeader("x-rapidapi-key", "yourapikey");
             request2.AddHeader("x-rapidapi-host", "covid-19-coronavirus-statistics.p.rapidapi.com");
             IRestResponse response2 = client2.Execute(request2);
             JsonDeserializer deserializer2 = new JsonDeserializer();
